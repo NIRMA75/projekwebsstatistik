@@ -1,0 +1,38 @@
+/* ====== Submenu Default Hidden ====== */
+.submenu {
+    display: none;            /* sembunyikan */
+    padding-left: 15px;       /* jarak kiri submenu */
+    margin-top: 5px;
+}
+
+/* ====== Show submenu on hover ====== */
+.menu-parent:hover .submenu {
+    display: block;
+}
+
+/* ===== Styling menu-parent ===== */
+.menu-parent > a {
+    display: block;
+    cursor: pointer;
+    padding: 8px 0;
+    font-weight: 500;
+}
+
+/* Optional: efek highlight ketika hover */
+.menu-parent:hover > a {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Styling tampilan submenu item */
+.submenu li a {
+    display: block;
+    padding: 5px 0;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.submenu li a:hover {
+    opacity: 1;
+    font-weight: bold;
+}

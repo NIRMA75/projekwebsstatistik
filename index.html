@@ -1,0 +1,195 @@
+<!DOCTYPE html> 
+<html lang="id"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width", initial-scale="1.0"/> 
+  <title>Ngopi Data - Beranda</title>
+  <link rel="stylesheet" href="style.css"> 
+</head> 
+
+<body> 
+  <div class="app">
+    <!--Sidebar kiri-->
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <img src="images/logo ngopi data.jpg" alt="Ngopi Data" class="badge">
+      </div>
+      <nav class="sidebar-nav" aria-label="sidebar">
+        <ul>
+          <li class="active"><a href="index.html">Beranda</a></li>
+          <li><a href="episode.html">Episode</a></li>
+          <li><a href="riwayat.html">Riwayat</a></li>
+          <li><a href="favorit.html">Favorit</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!--Main area-->
+    <div class="main-wrap">
+      <header class="site-header">
+        <div class="header-left">
+          <img src="images/logo ngopi data.jpg" alt="Ngopi Data" class="brand-logo">
+          <div class="brand-texts">
+            <h1 class="site-title">Ngopi Data</h1>
+            <p class="site-hub">Santai Bahas Data-Serius Berbagi Makna</p>
+          </div>
+        </div>
+
+        <!--Tombol titik tiga kebab-->
+        <div class="header-right">
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="cari episode..." data-i18n-placeholder="search.placeholder">
+            <button id="searchBtn" aria-label="Cari">🔍︎</button>
+          </div>
+
+          <div class="lang-wrapper">
+            <button id="langBtn" class="lang-btn">あ</button>
+            <select id="langSelect">
+              <option value="id">Indonesia</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+
+          <button id="drawerToggle" class="menu-toggle kebab" aria-label="Buka menu">
+            <span class="kebab-dot"></span>
+            <span class="kebab-dot"></span>
+            <span class="kebab-dot"></span>
+          </button>
+        </div>
+
+        <!--Off-canvas menu-->
+      <nav id="navDrawer" class="nav-drawer" aria-hidden="true">
+          <div class="drawer-inner">
+            <button id="closeDrawer" class="drawer-close" aria-label="Tutup menu">✕</button>
+            <ul class="drawer-list">
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="tentang.html">Tentang Ngopi Data</a></li>
+              <li><a href="statistik.html">Statistik Ngopi Data</a></li>
+              <li><a href="info.html">Info Ngopi Data</a></li>
+              <li class="menu-parent">
+                <a href="#" class="menu-toggle">Sains Data UIN K.H. Abdurrahman Wahid Pekalongan</a>
+                <ul class="submenu">
+                  <li><a href="tentang-sains-data.html">Tentang Sains Data</a></li>
+                  <li><a href="kurikulum.html">Kurikulum</a></li>
+                  <li><a href="dosen.html">Dosen</a></li>
+                </ul>
+              </li>
+              <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </li>
+            </ul>
+          </div>
+        </nav>
+        <div id="drawerBackdrop" class="drawer-backdrop" hidden></div>
+      </header>
+
+      <!--Hero carousel-->
+      <section class="hero">
+        <div class="carousel">
+          <div class="slides">
+            <img src="images/logo ngopi data.jpg" alt="Header 1" class="slide active">
+            <img src="images/gambar 1.jpg" alt="Header 2" class="slide">
+            <img src="images/gambar 2.jpg" alt="Header 3" class="slide">
+          </div>
+          <div class="carousel-dots"></div>
+        </div>
+      </section>
+
+      <!--Konten: Episode Baru-->
+      <main>
+        <section class="section-heading">
+          <h2 data-i18n="episode.title">Episode Baru</h2>
+          <p class="muted" data-i18n="episode.subtitle">Episode terbaru & highlight minggu ini</p>
+        </section>
+
+        <section class="card-grid" id="episodeGrid">
+          <article class="card">
+            <img class="card-thumb" src="images/gambar ep1.jpg" alt="Episode 1">
+            <div class="card-body">
+              <h3 class="card-title" data-i18n="ep.001.title">Ep 001 - Judul 1</h3>
+              <p class="card-meta">28:30 • <span data-i18n="ep.category">Tentang apa</span></p>
+              <div class="card-actions">
+                <button class="btn" data-i18n="btn.play">Putar</button>
+                <a class="link" href="#" data-i18n="btn.detail">Detail</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-thumb" src="images/gambar ep2.jpg" alt="Episode 2">
+            <div class="card-body">
+              <h3 class="card-title" data-i18n="ep.002.title">Ep 002 - Judul 2</h3>
+              <p class="card-meta">30:00 • <span data-i18n="ep.category">Tentang apa</span></p>
+              <div class="card-actions">
+                <button class="btn" data-i18n="btn.play">Putar</button>
+                <a class="link" href="#"data-i18n="btn.detail">Detail</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-thumb" src="images/gambar ep3.jpg" alt="Episode 3">
+            <div class="card-body">
+              <h3 class="card-title"data-i18n="ep.003.title">Ep 003 - Judul 3</h3>
+              <p class="card-meta">25:35 • <span data-i18n="ep.category">Tentang apa</span></p>
+              <div class="card-actions">
+                <button class="btn"data-i18n="btn.play">Putar</button>
+                <a class="link" href="#"data-i18n="btn.detail">Detail</a>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!--Video Pilihan-->
+        <section class="section-heading" style="margin-top:32px">
+          <h2>Video Pilihan</h2>
+          <p class="muted" data-i18n="mtd.slide">Geser untuk melihat lebih banyak video</p>
+        </section>
+
+        <div class="video-carousel-wrapper">
+          <div class="video-carousel">
+            <article class="video-card">
+              <img src="images/gambar video 1.jpg" alt="Video 1">
+              <div class="video-body">
+                <h4>Wawancara: ....</h4>
+                <p class="card-meta">40:20 • <span data-i18n="Interview">Wawancara</span></p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <img src="gambar video 2.jpg" alt="Video 2">
+              <div class="video-body">
+                <h4>Tutorial:....</h4>
+                <p class="card-meta">18:22 • <span data-i18n="Tutorial">Tutorial</span></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </main>
+        
+      <main>
+        <h3>Profil Kami</h3> 
+        <p>Ngopi Data adalah podcast resmi dari Mahasiswa Program Studi Sains Data UIN K.H. Abdurrahman Wahid Pekalongan yang menghadirkan obrolan ringan namun bermakna seputar dunia riset, inovasi, dan pengabdian masyarakat berbasis data.
+        Lewat suasana santai layaknya sedang ngopi sore, dosen, peneliti, dan mahasiswa berbagi kisah nyata di balik penelitian dan penerapan data dalam kehidupan sehari-hari.
+        Podcast ini menjadi ruang inspirasi bagi siapa pun yang ingin melihat bagaimana data bukan sekadar angka, tetapi juga cerita dan solusi bagi masyarakat.</p> 
+ 
+        <h3>Topik Kami:</h3> 
+          <ul> 
+            <li>Pengabdian Masyarakat</li> 
+            <li>Pengetahuan Keilmuan Sains Data </li> 
+            <li>Penelitian</li> 
+          </ul> 
+ 
+        <h3>Kunjungi Kami:</h3> 
+        <p><a href="https://youtube.com/ngopidata" target="_blank">Youtube Ngopi Data</a></p> 
+      </main> 
+
+      <footer> 
+        <p>&copy; 2025 Ngopi Data. Semua hak dilindungi.</p> 
+      </footer>
+    </div>      
+  </div>      
+
+  <script src="script.js"></script>
+</body> 
+</html> 
