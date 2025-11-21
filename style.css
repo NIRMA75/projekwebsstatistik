@@ -1,0 +1,452 @@
+:root{
+  --bg: #f7fbfe;
+  --header-bg: #564402da;
+  --text: #222;
+  --accent: #6b4f1d;
+  --muted: #6b7d86;
+}
+
+/* layout */
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text)}
+.app{display:flex;min-height:100vh}
+
+/* ===== SIDEBAR (kiri) ===== */
+.sidebar{
+  width:140px;
+  background:#564402da;
+  color:#fff;
+  display:flex;
+  flex-direction:column; 
+  align-items:center;
+  padding:18px 12px;
+}
+.sidebar .badge{
+  width:44px;
+  height:44px;
+  border-radius:8px;
+  object-fit:cover;
+  margin-bottom:14px;
+}
+.sidebar-nav ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px; overflow: visible;}
+.sidebar-nav a{color:#d9e3ea;text-decoration:none;font-size:14px;padding:8px;border-radius:8px;display:block;text-align:center}
+.sidebar-nav .active a{
+  background:rgba(255,255,255,0.15);
+  font-weight:bold;
+  color:#fff;
+}
+
+/* ===== MAIN WRAP ===== */
+.main-wrap{flex:1;display:flex;flex-direction:column;min-height:100vh}
+
+/* ===== HEADER ===== */
+.site-header{
+  background: #6f5f25;
+  color:#fff;
+  padding:10px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:999;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+.header-left{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+
+.brand-logo{width:55px;height:55px;border-radius:8px;object-fit:cover;background:#fff;padding:6px}
+.brand-texts .site-title{margin:0;font-size:20px;font-weight:bold}
+.brand-texts .site-hub{margin:0;font-size:12px;color:rgba(255,255,255,0.9)}
+
+/* search box */
+.search-box {
+  display:flex;
+  align-items:center;
+  background: rgba(255,255,255,0.06); /* lembut, bisa diubah jadi transparent */
+  padding: 6px 8px;
+  gap: 6px;
+  border-radius: 0;       /* tanpa lengkung pada container juga */
+}
+
+#searchInput {
+  border: 0;
+  outline: none;
+  padding: 8px 10px;
+  min-width: 480px;       /* memanjang */
+  background: transparent;/* biarkan sama dengan container */
+  color: #fff;
+  font-size: 14px;
+  border-radius: 50%;       /* tidak ada lengkung */
+}
+
+#searchBtn{
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 6px;
+  margin-left: 6px;
+  font-size: 14px;
+}
+
+.search-box:after{
+  content: "";
+  display: block;
+}
+
+#searchInput::placeholder { color: rgba(255,255,255,0.75); }
+
+/* desktop menu */
+.top-links{display:flex;align-items:center}
+.top-links ul{display:flex;gap:18px;margin:0;padding:0;list-style:none}
+.top-links a{color:#fff;text-decoration:none;font-size:15px}
+
+/* ====== LANGUAGE BUTTON STYLE ====== */
+.lang-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+#langSelect {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;         /* sembunyikan select asli */
+  cursor: pointer;
+}
+
+/* tombol bahasa bergaya seperti search-box */
+.lang-btn {
+  background: rgba(255,255,255,0.06);
+  border: 0;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 18px;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* hover (opsional) */
+.lang-btn:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+
+/* ===== MENU ICON (VERTICAL KEBAB) ===== */
+.menu-toggle.kebab {
+  display: flex;
+  flex-direction: column;   /* ubah jadi vertikal */
+  justify-content: center;
+  align-items: center;
+  gap: 4px;                 /* jarak antar titik */
+  background: rgba(255,255,255,0.06);
+  padding: 10px 12px;
+  border: none;
+  cursor:pointer;
+  border-radius: 0;
+  margin-left: 5px;
+}
+
+.kebab-dot {
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* ===== NAV DRAWER ===== */
+.nav-drawer{
+  position:fixed;top:0;right:0;height:100vh;width:280px;background:#fff;
+  transform:translateX(110%);
+  transition:transform .32s ease;
+  z-index:12000;box-shadow:-6px 0 30px rgba(0,0,0,0.18);
+}
+.nav-drawer.open{transform:translateX(0)}
+.drawer-inner{padding:18px}
+.drawer-close{float:right;background:transparent;border:0;font-size:22px;cursor:pointer}
+.drawer-list{margin:20px 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.drawer-list a{padding:10px 12px;text-decoration:none;color:var(--text);border-radius:6px;display:block}
+.drawer-list a:hover{background:#f0f4f7}
+
+/* overlay */
+.drawer-backdrop{
+  position:fixed;inset:0;background:rgba(0,0,0,0.45);
+  z-index:11900;opacity:1;pointer-events:auto;transition:opacity .25s;
+}
+.drawer-backdrop.show{opacity:1;pointer-events:auto}
+
+/* ===== HERO CAROUSEL ===== */
+.hero{padding:24px 18px}
+.carousel{max-width:980px;margin:0 auto;position:relative}
+.slides{position:relative;height:300px;border-radius:12px;overflow:hidden;background:#e8f1f4}
+.slides .slide{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;opacity:0;transition:opacity .8s,transform .6s;
+  transform:scale(1.03);
+}
+.slides .slide.active{opacity:1;transform:scale(1)}
+
+.carousel-dots{
+  display:flex;justify-content:center;gap:6px;margin-top:12px
+}
+.carousel-dots .dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:rgba(0,0,0,0.25);
+  display: inline-block;
+  border: 1px  solid rgba(0,0,0,0.12);
+  transition:background-color .12s;
+  box-shadow: none;
+  transform: none;
+  padding: 0;
+}
+.carousel-dots .dot.active{
+  background:#222;
+  transform:scale(1.25);
+}
+.video-carousel { display:flex; gap:16px; overflow-x:auto; padding:12px 8px; }
+.video-carousel .video-card { flex:0 0 280px; max-width:280px; }
+
+/* ===== CONTENT ===== */
+main{max-width:1200px;margin:26px auto;padding:0 18px 40px; text-align: left;}
+.section-heading h2{margin:0;font-size:20px;font-weight:600}
+.section-heading .muted{color:var(--muted);font-size:13px;margin-top:4px}
+
+/* Episode cards (Horizontal) */
+.card-grid{
+  display:flex; /*baris horizontal*/
+  gap:16px;
+  padding:14px 8px;
+  overflow-x:auto; /*geser horizontal*/
+  scroll-behavior:smooth;
+  -webkit-overflow-scrolling:touch;
+}
+.card{
+  flex: 0 0 320px; max-width: 320px; margin-bottom: 0;
+  background:#fff;border-radius:10px;overflow:hidden;
+  box-shadow:0 6px 16px rgba(0,0,0,0.06);
+}
+.card-thumb{width:100%;height:160px;object-fit:cover}
+.card-body{padding:12px}
+.card-title{margin:0 0 6px;font-size:16px;font-weight:600}
+.card-meta{color:var(--muted);font-size:13px;margin-bottom:10px}
+.card-actions{display:flex;gap:8px}
+.btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;border:0}
+.link{color:var(--accent);text-decoration:none}
+
+/* video */
+.video-grid .video-card img{width:100%;height:160px;object-fit:cover}
+
+/* footer */
+footer{
+  padding:20px 18px;background:#fff;border-top:1px solid #eef2f4;
+  text-align:center;color:#5b6b73;font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .sidebar{display:none}
+  .top-links{display:none}
+  .slides{height:220px}
+  #searchInput{min-width: 140px;}
+}
+
+/* ====== AREA KONTEN UTAMA (Tentang Ngopi Data) ====== */
+
+.main-content {
+  margin: auto;     /* beri jarak dari sidebar */
+  padding-left: 320px; /* geser sesuai lebar sidebar */
+  padding: 40px 60px;     
+  max-width: 900px;       /* agar tidak terlalu panjang */
+  line-height: 1.7;       /* biar enak dibaca */
+  color: #333;            /* warna teks lebih lembut */
+}
+
+.main-content h1,
+.main-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #2a2a2a;
+}
+
+.main-content p {
+  text-align: justify;     /* rapi kiri-kanan */
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+/* agar tidak menempel ke sidebar jika layar kecil */
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 0;
+    padding: 25px;
+  }
+}
+
+/* ========== CONTACT PAGE ========== */
+
+.contact-page {
+  max-width: 1100px;
+  margin: 0 auto;     
+  padding: 20px 24px;
+  display: flex;
+  margin-top: 0;
+  padding-top: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.contact-layout {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* MAP */
+.map-box {
+  flex: 1 1 420px;
+  max-width: 500px;
+  background: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+.map-box iframe{
+  width: 100%;
+  height: 300px;
+}
+.map-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #e7f1ff;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* ADDRESS AREA */
+.campus-info {
+  flex: 1 1 340px;
+  padding-top: 10px;
+}
+
+.campus-block {
+  margin-bottom: 10px;
+}
+
+.campus-block h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Social Icons */
+.social-box {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.social-icon img {
+  width: 36px;      /* diperkecil */
+  height: 36px;
+  object-fit: contain;
+  margin-right: 10px;
+  transition: 0.2s ease;
+}
+
+social-icon img:hover {
+  transform: scale(1.1);
+}
+
+/* SUBMENU STYLE */
+.submenu-1{
+    display: none;
+    list-style: none;
+    margin-left: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #ddd;
+}
+.menu-parent .submenu-1 {
+    display: none;
+    padding-left: 20px;
+}
+
+.submenu-1 li a {
+    display: block;
+    padding: 8px 0;
+    color: #ccc;
+    font-size: 15px;
+}
+
+.submenu-1 li a:hover {
+    color: #fff;
+}
+.menu-toggle{
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 12px 0;
+    cursor: pointer;
+}
+
+.menu-toggle .arrow {
+    float: right;
+    transition: transform 0.3s;
+}
+
+.menu-toggle .arrow.rotate {
+    transform: rotate(180deg);
+}
+.arrow {
+    font-size: 14px;
+    transition: 0.3s;
+    float: right;
+
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.arrow.rotate{
+  transform: rotate(180deg);
+}

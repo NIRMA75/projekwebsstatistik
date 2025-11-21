@@ -1,0 +1,86 @@
+/* ====== STYLE HALAMAN STATISTIK ====== */
+
+.stats-main {
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.stats-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #2a2a2a;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.stats-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 1px solid #eee5c7; /* selaras warna emas */
+}
+
+.stat-card h3 {
+    margin: 5px 0;
+}
+
+.stat-card p {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.stat-card .icon {
+    font-size: 40px;
+    color: #202020;
+    margin-bottom: 10px;
+}
+
+.stats-label {
+    font-size: 14px;
+    color: #6b7d86;
+    margin-bottom: 8px;
+}
+
+.stats-number {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.chart-container {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 35px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    border: 1px solid #eee5c7;
+}
+
+.chart-container h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.chart-box {
+    margin-top: 40px;
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.1);
+}
+@media(max-width:700px) {
+    .stats-main {
+        padding: 20px;
+    }
+}
