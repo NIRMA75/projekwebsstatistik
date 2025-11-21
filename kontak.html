@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width", intial-scale="1.0"/>
+  <title>Ngopi Data – Kontak Ngopi Data</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="app">
+  <!-- Sidebar Kiri-->
+  <aside class="sidebar">
+    <div class="sidebar-top">
+        <img src="images/logo ngopi data.jpg" alt="Ngopi Data" class="badge">
+    </div>
+    <nav class="sidebar-nav" aria-label="sidebar">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="episode.html">Episode</a></li>
+        <li><a href="riwayat.html">Riwayat</a></li>
+        <li><a href="favorit.html">Favorit</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- MAIN area -->
+  <div class="main-wrap">
+    <header class="site-header">
+      <div class="header-left">
+        <img src="images/logo ngopi data.jpg" alt="Ngopi Data" class="brand-logo">
+        <div class="brand-texts">
+          <h1 class="site-title">Ngopi Data</h1>
+          <p class="site-hub">Santai Bahas Data - Serius Berbagi Makna</p>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="lang-wrapper">
+          <button id="langBtn" class="lang-btn">あ</button>
+          <select id="langSelect">
+            <option value="id">Indonesia</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+
+        <!-- Tombol Kebab Menu -->
+        <button class="menu-toggle kebab" id="drawerToggle" aria-label="Buka Menu">
+          <span class="kebab-dot"></span>
+          <span class="kebab-dot"></span>
+          <span class="kebab-dot"></span>
+        </button>
+      </div>
+      <!--====Off-Canvas Menu====-->
+    <nav class="nav-drawer" id="navDrawer" arria-hidden="true">
+        <div class="drawer-inner">
+            <button class="drawer-close" id="drawerClose" aria-label="Tutup menu">✕</button>
+            <ul class="drawer-list">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="tentang.html">Tentang Ngopi Data</a></li>
+                <li><a href="statistik.html">Statistik Ngopi Data</a></li>
+                <li><a href="info.html">Info Ngopi Data</a></li>
+                <li><a href="keprodian.html">Sains Data UIN K.H. Abdurrahman Wahid Pekalongan</a></li>
+                <li class="active"><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="drawerBackdrop" class="drawer-backdrop" hidden></div> 
+    </header>
+
+    <!-- =============== CONTACT CONTENT =============== -->
+    <main class="contact-page">
+      <h1 class="contact-title">Kontak Kami</h1>
+      <div class="contact-layout">
+        <!-- LEFT: MAP -->
+        <div class="map-box">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18..."
+            width="100%" height="430" style="border:0;"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <a class="map-btn" href="#" target="_blank">Lihat peta lebih besar</a>
+        </div>
+
+        <!-- RIGHT: ALAMAT -->
+        <div class="campus-info">
+
+          <div class="campus-block">
+            <h3>KAMPUS 1</h3>
+            <p>
+              Jl. Kusuma Bangsa No.9, Panjang Baru,<br>
+              Kec. Pekalongan Utara, Kota Pekalongan,<br>
+              Jawa Tengah 51141
+            </p>
+          </div>
+
+          <div class="campus-block">
+            <h3>KAMPUS 2</h3>
+            <p>
+              Jl. Pahlawan Km.5 Rowolaku<br>
+              Kajen Kab. Pekalongan<br>
+              51161
+            </p>
+          </div>
+
+          <!--=====Sosial Media====-->
+          <div class="social-box">
+            <h3>Ikuti Kami</h3>
+
+            <a href="https://youtube.com/@ngopidata?si=kwCzlRKua_S-unMJ" target="_blank" class="social-icon">
+                <img src="images/logo yt.png" alt="Youtube Ngopi Data">
+            </a>    
+
+            <a href="https://www.instagram.com/ngopi.data?igsh=NTQxcDRnNnMwcDds" target="_blank" class="social-icon">
+                <img src="images/logo ig.png" alt="Instagram Ngopi Data">
+            </a>
+        </div>
+
+        </div>
+      </div>
+
+    </main>
+
+    <footer>
+      © 2025 Ngopi Data. Semua hak dilindungi.
+    </footer>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+<html lang="id"> 
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>Ngopi Data - Tentang Ngopi Data</title>
+  <link rel="stylesheet" href="style.css" /> 
+</head> 
+
+<body> 
+  <div class="app">
+    <!--Sidebar kiri-->
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <img src="images/logo ngopi data.jpg" alt="Ngopi Data" class="badge">
+      </div>
+      <nav class="sidebar-nav" aria-label="sidebar">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="episode.html">Episode</a></li>
+          <li><a href="riwayat.html">Riwayat</a></li>
+          <li><a href="favorit.html">Favorit</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!--Main area-->
+    <div class="main-wrap">
+      <header class="site-header">
+        <div class="header-left">
+          <img src="images/logo ngopi data.jpg" alt="Ngopi Data" class="brand-logo">
+          <div class="brand-texts">
+            <h1 class="site-title">Ngopi Data</h1>
+            <p class="site-hub">Santai Bahas Data-Serius Berbagi Makna</p>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="lang-wrapper">
+            <button id="langBtn" class="lang-btn">あ</button>
+            <select id="langSelect">
+              <option value="id">Indonesia</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+
+          <!--Tombol titik tiga kebab-->
+          <button id="drawerToggle" class="menu-toggle kebab" aria-label="Buka menu">
+            <span class="kebab-dot"></span>
+            <span class="kebab-dot"></span>
+            <span class="kebab-dot"></span>
+          </button>
+        </div>
+
+        <!--Off-canvas menu-->
+        <nav id="navDrawer" class="nav-drawer" aria-hidden="true">
+          <div class="drawer-inner">
+            <button id="closeDrawer" class="drawer-close" aria-label="Tutup menu">✕</button>
+            <ul class="drawer-list">
+              <li><a href="index.html">Beranda</a></li>
+              <li class="active"><a href="tentang.html">Tentang Ngopi Data</a></li>
+              <li><a href="statistik.html">Statistik Ngopi Data</a></li>
+              <li><a href="info.html">Info Ngopi Data</a></li>
+              <li><a href="keprodian.html">Sains Data UIN K.H. Abdurrahman Wahid Pekalongan</a></li>
+              <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div id="drawerBackdrop" class="drawer-backdrop" hidden></div>
+      </header>
+    
+    <div class="main-content">  
+      <h1>Tentang Ngopi Data</h1>
+      <p>TL; DR: Ngopi Data atau Ngobrol Pintar Anak Sains Data adalah pemutar podcast web terbaik 
+      mahasiswa program studi sains data UIN K.H. Abdurrahman Wahid Pekalongan. Podcast ini 
+      adalah podcast independen yang memberikan informasi menarik, segar, dan inspiratif terkait 
+      berbagai bidang yang berdasarkan pada data.
+      </p>
+     
+      <p>Podcast ini juga menyajikan penelitian dan pengalaman pengabdian masyarakat yang informatif 
+      dan bermanfaat bagi data scientist maupun podcaster lainnya yang semuanya diseduh menjadi 
+      satu dalam podcast Ngopi Data. Kami mulai dengan pemutar web kami: situs web yang sederhana 
+      namun dirancang secara intuitif yang akhirnya menghadirkan pengalaman mendengarkan podcast 
+      online hingga standar saat ini.
+      </p>
+
+      <p>Kami telah meninggalkan yang terburuk dari web (seperti popup, login yang diperlukan, 
+      halaman lambat dan penuh iklan) karena pemutar browser ini berfokus pada kenyamanan 
+      pengguna. Jika Anda menemukan sesuatu yang membingungkan, menemukan bug, atau ingin 
+      memberikan masukan, Anda dapat menghubungi tim kami kapan saja melalui fitur umpan balik.
+      </p>
+
+      <p>Ngopi Data dibangun oleh mahasiswa program studi Sains Data UIN K.H. Abdurrahman Wahid 
+      Pekalongan: Devita Rizqi Maulida, Nirma Ayu Suryaningtyas, Selvalenitna Rista Anggita, 
+      dan Azzahra Lailatun Nahdi.</p>
+
+      <footer> 
+        <p>&copy; 2025 Ngopi Data. Semua hak dilindungi.</p> 
+      </footer>
+    </div>      
+  </div>      
+
+  <script src="script.js"></script>
+</body> 
+</html> 

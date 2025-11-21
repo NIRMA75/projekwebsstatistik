@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html lang="id"> 
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>Video Podcast - Ngopi Data</title> 
+  <meta name="deskripsi" content="Daftar video podcast Ngopi Data - Pembahasan statistika, sains data, penelitian, dan pengabdian masyarakat dosen dan mahasiswa. Tonton episode terbaru dan baca ringkasan transkrip.">
+  <link rel="stylesheet" href="style.css" /> 
+</head> 
+<body> 
+   <header class="site-header">
+    <div class="wrap">
+      <h1 class="site-title">Ngopi Data</h1>
+      <p>Santai Bahas Data Serius Berbagi Makna.</p>
+      <!--tombol ikon kebab (titik tiga)-->
+      <button id="menuToggle" class="menu-toggle kebab" aria-label="buka menu" aria-expanded="false" aria-controls="mainNav">
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav> 
+        <ul> 
+          <li><a href="index.html">Beranda</a></li> 
+          <li><a href="tentang.html">Tentang Kami</a></li> 
+          <li><a href="podcast.html" class="active">Podcast Kami</a></li> 
+          <li><a href="statistik.html">Statistik</a></li> 
+          <li><a href="kontak.html">Kontak</a></li> 
+        </ul> 
+      </nav>
+    </div> 
+  </header> 
+ 
+  <main>
+    <section classs="intro"> 
+       <h2>Daftar Video Podcast</h2> 
+       <p>Berikut daftar podcast Ngopi Data yang bisa kamu dengerin:</p> 
+    </section>
+
+    <section class="controls">
+      <input id="searchInput" type="search" placeholder="Cari judul atau topik..." aria-label="Cari podcast">
+      <select id="categorySelect" aria-label="Filter kategori">
+        <option value="all">Semua kategori</option>
+        <option value="pengabdian masyarakat">Pengabdian Masyarakat</option>
+        <option value="pengetahuan keilmuan sains data">Pengetahuan Keilmuan Sains Data</option>
+        <option value="penelitian">Penelitian</option>
+      </select>
+    </section>
+
+    <section class="podcast-grid" id="podcastList">
+      <!--Daftar podcast diisi lewat JavaScript-->
+    </section>
+  </main>
+
+  <!--Modal Pemutar Video-->
+  <div id="modal" class="video-modal" hidden>
+    <div class="video-wrapper">
+      <button id="closeModal" class="colse-btn" arial-label="Tutup-Pemutar">✕</button>
+      <div id="videoContainer"></div>
+    </div>
+  </div>
+ 
+  <footer> 
+    <p>&copy; 2025 Ngopi Data-Santai Bahas Data Serius Berbagi Makna</p> 
+  </footer>
+  
+  <script src="script.js"></script> 
+</body> 
+</html> 

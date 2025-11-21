@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistik - Ngopi Data</title>
+
+    <!-- CSS UTAMA -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS KHUSUS HALAMAN STATISTIK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app">
+    <!-- Sidebar Kiri-->
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <img src="images/logo ngopi data.jpg" alt="Ngopi Data" class="badge">
+        </div>
+        <nav class="sidebar-nav" aria-label="sidebar">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="episode.html">Episode</a></li>
+                <li><a href="riwayat.html">Riwayat</a></li>
+                <li><a href="favorit.html">Favorit</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- MAIN WRAP -->
+    <div class="main-wrap">
+        <header class="site-header">
+            <div class="header-left">
+                <img src="images/logo ngopi data.jpg" class="brand-logo">
+                <div class="brand-texts">
+                    <h1 class="site-title">Ngopi Data</h1>
+                    <p class="site-hub">Santai Bahas Data - Serius Berbagi Makna</p>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="lang-wrapper">
+                    <button id="langBtn" class="lang-btn">あ</button>
+                    <select id="langSelect">
+                        <option value="id">Indonesia</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+
+                <!-- Tombol Kebab Menu -->
+                <button class="menu-toggle kebab" id="drawerToggle" aria-label="Buka Menu">
+                    <span class="kebab-dot"></span>
+                    <span class="kebab-dot"></span>
+                    <span class="kebab-dot"></span>
+                </button>
+            </div>
+
+            <!--====Off-Canvas Menu====-->
+            <nav class="nav-drawer" id="navDrawer" arria-hidden="true">
+                <div class="drawer-inner">
+                    <button class="drawer-close" id="drawerClose" aria-label="Tutup menu">✖</button>
+                    <ul class="drawer-list">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="tentang.html">Tentang Ngopi Data</a></li>
+                        <li class="active"><a href="statistik.html">Statistik Ngopi Data</a></li>
+                        <li><a href="info.html">Info Ngopi Data</a></li>
+                        <li><a href="keprodian.html">Sains Data UIN K.H. Abdurrahman Wahid Pekalongan</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="drawerBackdrop" class="drawer-backdrop" hidden></div>
+        </header>
+
+        <!-- ISI STATISTIK -->
+        <main class="stats-main">
+            <h2 class="stats-title">Statistik Kinerja Platform</h2>
+            <div class="stats-grid">
+                <div class="stats-card">
+                    <p class="stats-label">Pengunjung Hari Ini</p>
+                    <p class="stats-number" id="todayVisitors">0</p>
+                </div>
+
+                <div class="stats-card">
+                    <p class="stats-label">Total Pengunjung</p>
+                    <p class="stats-number" id="totalVisitors">0</p>
+                </div>
+
+                <div class="stats-card">
+                    <p class="stats-label">Postingan Disukai</p>
+                    <p class="stats-number" id="likedPosts">0</p>
+                </div>
+
+                <div class="stats-card">
+                    <p class="stats-label">Total Podcast</p>
+                    <p class="stats-number" id="podcastCount">0</p>
+                </div>
+
+                <div class="stats-card">
+                    <p class="stats-label">Ritme Aktivitas</p>
+                    <p class="stats-number" id="activityRate">0%</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Grafik Postingan & Pengunjung per Bulan</h3>
+                <canvas id="lineChart"></canvas>
+            </div>
+        </main>
+
+        <main>
+            <h3>Kunjungi Kami:</h3> 
+            <p><a href="https://www.youtube.com/@ngopidata" target="_blank">Youtube Ngopi Data</a></p> 
+        </main>
+
+        <footer> 
+        <p>&copy; 2025 Ngopi Data. Semua hak dilindungi.</p> 
+      </footer>
+    </div>       
+
+    <script src="script.js"></script>
+</body> 
+</html> 
+   
